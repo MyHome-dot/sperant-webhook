@@ -15,7 +15,7 @@ app.post('/webhook-ghl', async (req, res) => {
     lname:            body.last_name  || '',
     email:            body.email      || '',
     phone:            body.phone      || body.phone_number || '',
-    project_id:       "9bdba289-121ed4-9d15",
+    project_id:       578
     input_channel_id: 33,
     source_id:        13,
     interest_type_id: 15,
