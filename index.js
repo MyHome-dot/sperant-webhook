@@ -21,7 +21,7 @@ app.post('/webhook-ghl', async (req, res) => {
     last_name:  lastName,
     email:      email,
     phone:      phone,
-    project_id: TU_PROJECT_ID, // ← reemplazar con el ID de tu proyecto
+    project_id: "9bdba289-121ed4-9d15",
   };
 
   try {
