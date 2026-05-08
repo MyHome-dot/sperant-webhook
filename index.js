@@ -10,18 +10,15 @@ app.post('/webhook-ghl', async (req, res) => {
 
   const body = req.body;
 
-  // GoHighLevel puede enviar los campos con distintos nombres
-  const name     = body.first_name || body.name || '';
-  const lastName = body.last_name  || body.last_name || '';
-  const email    = body.email      || '';
-  const phone    = body.phone      || body.phone_number || '';
-
   const payload = {
-    name:       name,
-    last_name:  lastName,
-    email:      email,
-    phone:      phone,
-    project_id: "9bdba289-121ed4-9d15",
+    fname:            body.first_name || body.name || '',
+    lname:            body.last_name  || '',
+    email:            body.email      || '',
+    phone:            body.phone      || body.phone_number || '',
+    project_id:       "9bdba289-121ed4-9d15",
+    input_channel_id: 33,
+    source_id:        13,
+    interest_type_id: 15,
   };
 
   try {
@@ -38,7 +35,7 @@ app.post('/webhook-ghl', async (req, res) => {
     console.log('Respuesta de Sperant:', data);
     res.status(200).json({ success: true, data });
   } catch (error) {
-    console.error('Error al llamar Sperant:', error);
+    console.error('Error:', error);
     res.status(500).json({ success: false, error: error.message });
   }
 });
