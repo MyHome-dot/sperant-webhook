@@ -16,9 +16,9 @@ app.post('/webhook-ghl', async (req, res) => {
     email:            body.email      || '',
     phone:            body.phone      || body.phone_number || '',
     project_id:       1,
-    input_channel_id: 3,
-    source_id:        8,
-    interest_type_id: 5,
+    input_channel_id: 12,
+    source_id:        19,
+    interest_type_id: 16,
   };
 
   try {
