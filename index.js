@@ -25,7 +25,7 @@ app.post('/webhook-ghl', async (req, res) => {
     const response = await fetch(SPERANT_URL, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${SPERANT_TOKEN}`,
+        'Authorization': `${SPERANT_TOKEN}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(payload),
