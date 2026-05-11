@@ -3,22 +3,22 @@ const app = express();
 app.use(express.json());
 
 const SPERANT_TOKEN = '4qTeCts5Yr98FnagiRDCt5F5eTsQApk36p4dnMG3';
-const SPERANT_URL = 'https://api.eterniasoft.com/v3/clients';
+const SPERANT_URL = 'https://api.sperant.com/v3/clients';
 
 app.post('/webhook-ghl', async (req, res) => {
   console.log('Datos recibidos de GHL:', req.body);
 
   const body = req.body;
 
-  const payload = {
+ const payload = {
     fname:            body.first_name || body.name || '',
     lname:            body.last_name  || '',
     email:            body.email      || '',
     phone:            body.phone      || body.phone_number || '',
-    project_id:       578
-    input_channel_id: 33,
-    source_id:        13,
-    interest_type_id: 15,
+    project_id:       1,
+    input_channel_id: 3,
+    source_id:        8,
+    interest_type_id: 5,
   };
 
   try {
