@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-const SPERANT_TOKEN = '5PrYiXZgyc56UCSZNoVbeDYjCRX6diO4dlyWOs05';
+const SPERANT_TOKEN = '4qTeCts5Yr98FnagiRDCt5F5eTsQApk36p4dnMG3';
 const SPERANT_URL = 'https://api.eterniasoft.com/v3/clients';
 
 app.post('/webhook-ghl', async (req, res) => {
