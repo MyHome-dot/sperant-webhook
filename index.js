@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-const SPERANT_TOKEN = '5PrYiXZgyc56UCSZNoVbeDYjCRX6diO4dlyWOs05';
-const SPERANT_URL = 'https://api.eterniasoft.com/v3/clients';
+const SPERANT_TOKEN = '4qTeCts5Yr98FnagiRDCt5F5eTsQApk36p4dnMG3 ';
+const SPERANT_URL = 'https://api.sperant.com/v3/clients';
 
 app.post('/webhook-ghl', async (req, res) => {
   console.log('Datos recibidos de GHL:', req.body);
@@ -15,9 +15,9 @@ app.post('/webhook-ghl', async (req, res) => {
     lname:            body.last_name  || '',
     email:            body.email      || '',
     phone:            body.phone      || body.phone_number || '',
-    project_id:       473,
-    input_channel_id: 29,
-    source_id:        52,
+    project_id:       1,
+    input_channel_id: 3,
+    source_id:        8,
     interest_type_id: 5,
   };
 
